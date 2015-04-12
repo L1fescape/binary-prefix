@@ -1,0 +1,29 @@
+{
+  "name": "binary-prefix",
+  "version": "1.0.0",
+  "description": "Return a list of binary or decimal SI unit prefixes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/akenn/binary-prefix"
+  },
+  "author": "Andrew Kennedy <andrew@akenn.org>",
+  "keywords": [
+    "binary",
+    "prefix",
+    "prefixes",
+    "decimal",
+    "SI",
+    "unit"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.6.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  }
+}
