@@ -53,3 +53,13 @@ it('should support custom prefixes', function () {
     YB: 'A ton of bytes'
   });
 });
+
+it('should not premanently modify the prefixes object', function () {
+  var decimalPrefixes = prefixes({
+    decimal: true
+  });
+  expect(decimalPrefixes.KB).to.equal('kB');
+
+  var binaryPrefixes = prefixes();
+  expect(binaryPrefixes.KB).to.equal('KB');
+});
