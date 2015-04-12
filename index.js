@@ -22,5 +22,5 @@ module.exports = function(options){
     prefixes['KB'] = 'kB';
   }
 
-  return _.extend(prefixes, customPrefixes);
+  return _.extend({}, prefixes, customPrefixes);
 };
