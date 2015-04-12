@@ -53,6 +53,7 @@ prefixes({ custom: { KB: 'kilobytes', GB: 'gigga-bytes' } });
 //=>   ZB: 'ZB',
 //=>   YB: 'YB'
 //=> }
+```
 
 ## License
 
