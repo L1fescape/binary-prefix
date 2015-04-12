@@ -1,6 +1,6 @@
 {
   "name": "binary-prefix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Return a list of binary or decimal SI unit prefixes.",
   "main": "index.js",
   "scripts": {
