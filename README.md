@@ -13,6 +13,18 @@ $ npm install --save binary-prefix
 ```js
 var prefixes = require('binary-prefix');
 
+prefixes.binary;
+//=> {
+//=>   B: 'B',
+//=>   KB: 'KB',
+//=>   MB: 'MB',
+//=>   GB: 'GB',
+//=>   TB: 'TB', 
+//=>   PB: 'PB',
+//=>   EB: 'EB',
+//=>   ZB: 'ZB',
+//=>   YB: 'YB'
+//=> }
 prefixes();
 //=> {
 //=>   B: 'B',
@@ -27,6 +39,18 @@ prefixes();
 //=> }
 
 // Getting a list of decimal prefixes
+prefixes.decimal;
+//=> {
+//=>   B: 'B',
+//=>   KB: 'kB',
+//=>   MB: 'MB',
+//=>   GB: 'GB',
+//=>   TB: 'TB', 
+//=>   PB: 'PB',
+//=>   EB: 'EB',
+//=>   ZB: 'ZB',
+//=>   YB: 'YB'
+//=> }
 prefixes({ decimal: true });
 //=> {
 //=>   B: 'B',

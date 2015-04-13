@@ -63,3 +63,31 @@ it('should not premanently modify the prefixes object', function () {
   var binaryPrefixes = prefixes();
   expect(binaryPrefixes.KB).to.equal('KB');
 });
+
+it('should be able to reference prefixes directly', function () {
+  var decimalPrefixes = prefixes.decimal;
+  expect(decimalPrefixes).to.eql({
+    B: 'B',
+    KB: 'kB',
+    MB: 'MB',
+    GB: 'GB',
+    TB: 'TB', 
+    PB: 'PB',
+    EB: 'EB',
+    ZB: 'ZB',
+    YB: 'YB'
+  });
+
+  var binaryPrefixes = prefixes.binary;
+  expect(binaryPrefixes).to.eql({
+    B: 'B',
+    KB: 'KB',
+    MB: 'MB',
+    GB: 'GB',
+    TB: 'TB', 
+    PB: 'PB',
+    EB: 'EB',
+    ZB: 'ZB',
+    YB: 'YB'
+  });
+});

@@ -1,11 +1,7 @@
 'use strict';
 var _ = require('lodash');
-
-module.exports = function(options){
-  options = options || {};
-  var customPrefixes = options.custom || {};
-  var decimal = options.decimal || false;
-  var prefixes = {
+var prefixes = {
+  binary: {
     B: 'B',
     KB: 'KB',
     MB: 'MB',
@@ -15,11 +11,27 @@ module.exports = function(options){
     EB: 'EB',
     ZB: 'ZB',
     YB: 'YB'
-  };
-
-  if (decimal) {
-    prefixes['KB'] = 'kB';
+  },
+  decimal: {
+    B: 'B',
+    KB: 'kB',
+    MB: 'MB',
+    GB: 'GB',
+    TB: 'TB',
+    PB: 'PB',
+    EB: 'EB',
+    ZB: 'ZB',
+    YB: 'YB'
   }
-
-  return _.extend({}, prefixes, customPrefixes);
 };
+
+module = module.exports = function(options){
+  options = options || {};
+  var customPrefixes = options.custom || {};
+  var decimal = options.decimal || false;
+
+  return _.extend({}, (decimal ? prefixes.decimal : prefixes.binary), customPrefixes);
+};
+
+module.binary = prefixes.binary;
+module.decimal = prefixes.decimal;
